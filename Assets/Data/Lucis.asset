@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bdd05acc699364294b2353ace748a2, type: 3}
+  m_Name: Lucis
+  m_EditorClassIdentifier: 
+  PawnName: Lucis
+  Hp: 10
+  Speed: 5
+  AnimUp: {fileID: 7400000, guid: c43610dc12102c148bdee5fcb731b08b, type: 2}
+  AnimDown: {fileID: 7400000, guid: ec912c4588c6df54ab048ce2cfdb0d0a, type: 2}
+  AnimRight: {fileID: 7400000, guid: b80b23b4ff9a738489ba49b73b2b21b4, type: 2}
+  AnimLeft: {fileID: 7400000, guid: ecb8568722264044c97bd308a06b18dc, type: 2}
