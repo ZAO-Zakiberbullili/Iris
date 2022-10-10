@@ -64,6 +64,6 @@ public class Player : MonoBehaviour
 
     void FollowPlayer(int playerIndex) 
     {
-
+        // плагин
     }
 }
