@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private PlayerMovementBase _playerMovementBase;
+    [SerializeField] private PlayerMovementBattle _playerMovementBattle;
+    [SerializeField] private BattleActiveController _BattleActiveController;
+
+    private MovementSystem _movementSystem;
+
     public GameObject[] Team;
     public PawnData[] TeamData;
-
+    
     private Rigidbody2D[] _teamRB;
     private Animation[] _teamAnim;
 
@@ -15,6 +21,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        _movementSystem = _playerMovementBase;
+
         _teamRB = new Rigidbody2D[4];
         _teamAnim = new Animation[4];
 
@@ -30,13 +38,26 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        if (_BattleActiveController.IsBattleActive)
+        {
+            _movementSystem = _playerMovementBattle;
+        } else
+        {
+            _movementSystem = _playerMovementBase;
+        }
+ 
+
+
         _playerIndex = (int) _input.Hero;
 
-        Move(_playerIndex);
+        AnimMove(_playerIndex);
+        _movementSystem.MovePlayer(_playerIndex);
+
+        if (!_BattleActiveController.IsBattleActive)
         for (int i = 0; i < 4; i++) {
             if (i != _playerIndex) {
-                FollowPlayer(i);
+                ((PlayerMovementBase) _movementSystem).FollowPlayer(i);
             }
         }
 
@@ -45,25 +66,27 @@ public class Player : MonoBehaviour
         }*/
     }
 
-    void Move(int playerIndex) 
+    void AnimMove(int playerIndex) 
     {
-        Vector2 playerMove = new Vector2(_input.Move.x, _input.Move.y);
+        
 
-        _teamRB[playerIndex].velocity = playerMove * TeamData[playerIndex].Speed;
+ //       Vector2 playerMove = new Vector2(_input.Move.x, _input.Move.y);
 
-        if (playerMove == Vector2.up) {
+ //       _teamRB[playerIndex].velocity = playerMove * TeamData[playerIndex].Speed;
+ 
+        if (_movementSystem.PlayerMove == Vector2.up) {
             _teamAnim[playerIndex].Play("AnimUp");
-        } else if (playerMove == Vector2.down) {
+        } else if (_movementSystem.PlayerMove == Vector2.down) {
             _teamAnim[playerIndex].Play("AnimDown");
-        } else if (playerMove == Vector2.right) {
+        } else if (_movementSystem.PlayerMove == Vector2.right) {
             _teamAnim[playerIndex].Play("AnimRight");
-        } else if (playerMove == Vector2.left) {
+        } else if (_movementSystem.PlayerMove == Vector2.left) {
             _teamAnim[playerIndex].Play("AnimLeft");
-        }
+        } 
     }
 
-    void FollowPlayer(int playerIndex) 
+   /* void FollowPlayer(int playerIndex) 
     {
         // плагин
-    }
+    } */
 }
