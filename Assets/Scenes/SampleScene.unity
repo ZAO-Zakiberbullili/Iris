@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26915634}
   - component: {fileID: 26915633}
+  - component: {fileID: 26915635}
   m_Layer: 0
   m_Name: PlayerPawn3
   m_TagString: Untagged
@@ -207,6 +208,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &26915635
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26915629}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &42479112
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +242,10 @@ GameObject:
   - component: {fileID: 42479116}
   - component: {fileID: 42479115}
   - component: {fileID: 42479118}
+  - component: {fileID: 42479120}
+  - component: {fileID: 42479119}
+  - component: {fileID: 42479121}
+  - component: {fileID: 42479122}
   m_Layer: 0
   m_Name: PlayerPawn1
   m_TagString: Untagged
@@ -429,6 +455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b914142cc286a54fab03a0306c7203a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMovementBase: {fileID: 42479120}
+  _playerMovementBattle: {fileID: 42479119}
+  _BattleActiveController: {fileID: 42479121}
   Team:
   - {fileID: 42479112}
   - {fileID: 1554329225}
@@ -440,6 +469,83 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c905116f95a88a04fbebb1313cb6cdda, type: 2}
   - {fileID: 11400000, guid: 1917a3b0587b646488b9978f19b90a1e, type: 2}
   _input: {fileID: 42479116}
+--- !u!114 &42479119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42479112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b6c6f61fb961f4d88e4400feea950b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team: []
+  TeamData: []
+  _teamRB: []
+  _input: {fileID: 42479116}
+--- !u!114 &42479120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42479112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb01fa8351abce48a9050d45118f684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team:
+  - {fileID: 42479112}
+  - {fileID: 1554329225}
+  - {fileID: 26915629}
+  - {fileID: 1359172473}
+  TeamData:
+  - {fileID: 11400000, guid: 2da83b5afa6b7a44ea7d97432fd1adce, type: 2}
+  - {fileID: 11400000, guid: d263b58f87075ca44a73587e37542210, type: 2}
+  - {fileID: 11400000, guid: c905116f95a88a04fbebb1313cb6cdda, type: 2}
+  - {fileID: 11400000, guid: 1917a3b0587b646488b9978f19b90a1e, type: 2}
+  _teamRB:
+  - {fileID: 42479122}
+  - {fileID: 1554329230}
+  - {fileID: 26915635}
+  - {fileID: 1359172479}
+  _input: {fileID: 42479116}
+--- !u!114 &42479121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42479112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f027ace3d78700d40bd39d62cd7b5eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &42479122
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42479112}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359172478}
   - component: {fileID: 1359172477}
+  - component: {fileID: 1359172479}
   m_Layer: 0
   m_Name: PlayerPawn4
   m_TagString: Untagged
@@ -3108,6 +3215,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1359172479
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359172473}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1554329225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,6 +3246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554329229}
   - component: {fileID: 1554329228}
+  - component: {fileID: 1554329230}
   m_Layer: 0
   m_Name: PlayerPawn2
   m_TagString: Untagged
@@ -3192,6 +3321,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1554329230
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554329225}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2011593875
 GameObject:
   m_ObjectHideFlags: 0
