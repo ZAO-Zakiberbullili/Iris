@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     public GameObject[] Team;
     public PawnData[] TeamData;
     
-    private Rigidbody2D[] _teamRB;
     private Animation[] _teamAnim;
 
     [SerializeField]
@@ -23,11 +22,9 @@ public class Player : MonoBehaviour
     {
         _movementSystem = _playerMovementBase;
 
-        _teamRB = new Rigidbody2D[4];
         _teamAnim = new Animation[4];
 
         for (int i = 0; i < 4; i++) {
-            _teamRB[i] = Team[i].AddComponent<Rigidbody2D>();
             _teamAnim[i] = Team[i].AddComponent<Animation>();
             // todo: change for standing anim
             _teamAnim[i].AddClip(TeamData[i].AnimUp, "AnimUp");

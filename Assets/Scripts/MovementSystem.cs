@@ -7,7 +7,7 @@ public abstract class MovementSystem : MonoBehaviour
     public GameObject[] Team;
     public PawnData[] TeamData;
 
-    protected Rigidbody2D[] _teamRB;
+    [SerializeField] protected Rigidbody2D[] _teamRB;
 
     [SerializeField] protected PlayerInput _input;
 
