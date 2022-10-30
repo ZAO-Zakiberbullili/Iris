@@ -324,7 +324,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294051961}
         m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: OnSwitchHero1
+        m_MethodName: OnSwitchHero0
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -340,7 +340,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294051961}
         m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: OnSwitchHero2
+        m_MethodName: OnSwitchHero1
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -356,7 +356,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294051961}
         m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: OnSwitchHero3
+        m_MethodName: OnSwitchHero2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -372,7 +372,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294051961}
         m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: OnSwitchHero4
+        m_MethodName: OnSwitchHero3
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
