@@ -2,7 +2,24 @@ using UnityEngine;
 
 public class Player : Pawn
 {
+    [SerializeField] private float _CarryingSpeedfactor;
     private bool _isActive = false;
+    private bool _isMoveObject = false;
+    
+    public float CarryingSpeedfactor
+    {
+        get
+        {
+            return _CarryingSpeedfactor;
+        }
+    }
+
+    public bool IsMoveObject{
+        set
+        {
+            _isMoveObject = value;
+        }
+    }
     public bool IsActive { 
         get { 
             return _isActive; 
@@ -15,8 +32,8 @@ public class Player : Pawn
 
     public void IndependentMove(Vector2 direction)
     {
-        RB.velocity = direction * Speed;
-
+        RB.velocity = direction * Speed * (_isMoveObject ? _CarryingSpeedfactor : 1);
+        Direction = direction;
         switch (direction) {
             case Vector2 v when v.Equals(Vector2.right):
                 Animator.Play("Right", 0, 0f);

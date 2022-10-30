@@ -4,10 +4,11 @@ public class Pawn : MonoBehaviour
 {
     private int _hp, _maxHp;
     private int _mp, _maxMp; 
-    protected int Speed, TilesPerTurn;
     private SpriteRenderer _spriteRenderer;
 
-
+    public Vector2 Direction { get; protected set; }
+    public int Speed { get; protected set; }
+    protected int TilesPerTurn;
     protected Rigidbody2D RB;
     protected Animator Animator;
 
