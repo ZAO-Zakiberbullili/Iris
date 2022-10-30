@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bdd05acc699364294b2353ace748a2, type: 3}
   m_Name: Kristo
   m_EditorClassIdentifier: 
-  PawnName: Kristo
+  Name: Kristo
+  X: -2
+  Y: 0
   Hp: 10
+  MaxHp: 10
+  Mp: 10
+  MaxMp: 10
   Speed: 5
-  AnimUp: {fileID: 7400000, guid: 5aea971d3d8b989408465b51d3ff65d7, type: 2}
-  AnimDown: {fileID: 7400000, guid: db310ce8f1a1c0e4690f2c72f6b99895, type: 2}
-  AnimRight: {fileID: 7400000, guid: 3d5c89d1a1f4d5f4286909f70a3b00c5, type: 2}
-  AnimLeft: {fileID: 7400000, guid: ad0eddb6c28cb074386524ba1f921d24, type: 2}
+  TilesPerTurn: 5
+  sprite: {fileID: -1494315388, guid: acd3e7181aef73840a88c08816a4a451, type: 3}
+  Anim: {fileID: 9100000, guid: fb8f4a2c860ff8f4d90683077de5f923, type: 2}

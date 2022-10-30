@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bdd05acc699364294b2353ace748a2, type: 3}
   m_Name: Emily
   m_EditorClassIdentifier: 
-  PawnName: Emily
+  Name: Emily
+  X: 0
+  Y: 0
   Hp: 10
+  MaxHp: 10
+  Mp: 10
+  MaxMp: 10
   Speed: 5
-  AnimUp: {fileID: 7400000, guid: 7f769f21db904b64faf487b1444ba5c3, type: 2}
-  AnimDown: {fileID: 7400000, guid: 2fd06062b4cdd064b9d8c0bb82e717c3, type: 2}
-  AnimRight: {fileID: 7400000, guid: df087c41026a7d44b801000eb68dc3c5, type: 2}
-  AnimLeft: {fileID: 7400000, guid: e244c1f2bbdff5e438b03e795121139b, type: 2}
+  TilesPerTurn: 5
+  sprite: {fileID: 1836229643, guid: 4ebfacd74cff71d4f85a699790c14fcb, type: 3}
+  Anim: {fileID: 9100000, guid: 24b033f3834c840468b3c30bb0eb42e5, type: 2}
