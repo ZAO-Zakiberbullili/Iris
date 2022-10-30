@@ -1,14 +1,13 @@
-
 public class TestMovableObject : MovableObject
 {
-    void Start()
+    private void Start()
     {
         IsMovable = true;
         IsDamagable = false;
     }
 
 
-    void Update()
+    private void Update()
     {
         TryMove();
     }

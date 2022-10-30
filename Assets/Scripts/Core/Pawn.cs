@@ -80,7 +80,7 @@ public class Pawn : MonoBehaviour
         animator.runtimeAnimatorController = anim;
     }
 
-    void Start()
+    private void Start()
     {
         RB = GetComponent<Rigidbody2D>();
     }
