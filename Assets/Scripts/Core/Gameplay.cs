@@ -13,11 +13,34 @@ public class Gameplay : MonoBehaviour
 
     public GameState State;
 
-    public Hero hero = Hero.Hero1;
+    public Hero hero = Hero.Hero0;
 
     public Vector2 direction;
 
-    void Start () 
+    public void SwitchHero(Hero newHero)
+    {
+        for (int i = 0; i < Players.Length; i++)
+        {
+            Players[i].IsActive = false;
+        }
+        switch (newHero)
+        {
+            case Hero.Hero0:
+                Players[0].IsActive = true;
+                break;
+            case Hero.Hero1:
+                Players[1].IsActive = true;
+                break;
+            case Hero.Hero2:
+                Players[2].IsActive = true;
+                break;
+            case Hero.Hero3:
+                Players[3].IsActive = true;
+                break;
+        }
+    }
+
+    private void Start () 
     {
         GameManager = this;
 
@@ -37,16 +60,22 @@ public class Gameplay : MonoBehaviour
         }
 
         State = GameState.Play;
+        Players[0].IsActive = true;
     }
 
-    void Update ()
+    private void Update ()
     {
         switch (State) {
             case GameState.Play:
-                for (int i = 0; i < 4; i++) {
-                    if ((int)hero == i) {
-                        Players[(int)hero].Move(direction);
-                    } else Players[i].Follow();
+                for (int i = 0; i < Players.Length; i++) {
+                    if (Players[i].IsActive)
+                    {
+                        Players[i].IndependentMove(direction);
+                    } 
+                    else
+                    {
+                        Players[i].FollowMove();
+                    }
                 }
                 break;
             case GameState.Fight:
@@ -61,8 +90,8 @@ public enum GameState {
 }
 
 public enum Hero {
+    Hero0,
     Hero1,
     Hero2,
     Hero3,
-    Hero4,
 }

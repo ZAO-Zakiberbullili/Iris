@@ -2,25 +2,25 @@ using UnityEngine;
 
 public class Pawn : MonoBehaviour
 {
-    int Hp, MaxHp;
-    int Mp, MaxMp;
+    private int _hp, _maxHp;
+    private int _mp, _maxMp; 
     protected int Speed, TilesPerTurn;
+    private SpriteRenderer _spriteRenderer;
+
 
     protected Rigidbody2D RB;
-    
-    SpriteRenderer spriteRenderer;
-    protected Animator animator;
+    protected Animator Animator;
 
     public void LoadHpData(int hp, int maxHp)
     {
-        Hp = hp;
-        MaxHp = maxHp;
+        _hp = hp;
+        _maxHp = maxHp;
     }
 
     public void LoadMpData(int mp, int maxMp)
     {
-        Mp = mp;
-        MaxMp = maxMp;
+        _mp = mp;
+        _maxMp = maxMp;
     }
 
     public void LoadMoveData(int speed, int tilesPerTurn)
@@ -31,40 +31,40 @@ public class Pawn : MonoBehaviour
 
     public void AddHp(int hp)
     {
-        int tempHp = Hp + hp;
-        if (tempHp > MaxHp) {
+        int tempHp = _hp + hp;
+        if (tempHp > _maxHp) {
             RestoreHp();
-        } else Hp = tempHp;
+        } else _hp = tempHp;
     }
 
     public void AddMp(int mp)
     {
-        int tempMp = Mp + mp;
-        if (tempMp > MaxMp) {
+        int tempMp = _mp + mp;
+        if (tempMp > _maxMp) {
             RestoreHp();
-        } else Mp = tempMp;
+        } else _mp = tempMp;
     }
 
     public void RestoreHp() {
-        Hp = MaxHp;
+        _hp = _maxHp;
     }
 
     public void RestoreMp() {
-        Mp = MaxMp;
+        _mp = _maxMp;
     }
 
     public void AddDamage(int damage) {
-        int tempHp = Hp - damage;
+        int tempHp = _hp - damage;
         if (tempHp < 0) {
             Destroy(gameObject);
-          } else Hp = tempHp;
+          } else _hp = tempHp;
     }
 
     public void ConsumeMana(int manaConsumed) {
-        int tempMp = Mp - manaConsumed;
+        int tempMp = _mp - manaConsumed;
         if (tempMp < 0) {
             Destroy(gameObject);
-          } else Mp = tempMp;
+          } else _mp = tempMp;
     }
 
     public void LoadSprite(Sprite sprite)

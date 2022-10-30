@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "SwitchHero1",
+                    "name": "SwitchHero0",
                     "type": "Button",
                     "id": "365d4597-57a1-4b38-8575-9a801c8058fc",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchHero2",
+                    "name": "SwitchHero1",
                     "type": "Button",
                     "id": "f0264cec-0c3d-4c97-8826-0dcad725311c",
                     "expectedControlType": "Button",
@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchHero3",
+                    "name": "SwitchHero2",
                     "type": "Button",
                     "id": "157958e7-a4b0-4884-a805-6072b5e55c01",
                     "expectedControlType": "Button",
@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchHero4",
+                    "name": "SwitchHero3",
                     "type": "Button",
                     "id": "b73f28cc-de12-4d2f-9a4e-c447a18c86f3",
                     "expectedControlType": "Button",
@@ -233,7 +233,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero1",
+                    "action": "SwitchHero0",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -244,7 +244,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero1",
+                    "action": "SwitchHero0",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -255,7 +255,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero2",
+                    "action": "SwitchHero1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -266,7 +266,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero2",
+                    "action": "SwitchHero1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -277,7 +277,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero3",
+                    "action": "SwitchHero2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -288,7 +288,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero3",
+                    "action": "SwitchHero2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -299,7 +299,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero4",
+                    "action": "SwitchHero3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -310,7 +310,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchHero4",
+                    "action": "SwitchHero3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
