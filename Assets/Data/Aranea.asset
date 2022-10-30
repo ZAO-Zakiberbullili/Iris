@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Aranea
   m_EditorClassIdentifier: 
   Name: Aranea
-  X: 2
+  X: 0
   Y: 0
   Hp: 10
   MaxHp: 10
