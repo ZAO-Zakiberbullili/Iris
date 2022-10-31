@@ -15,6 +15,10 @@ public class Player : Pawn
     }
 
     public bool IsMoveObject{
+        get
+        {
+            return _isMoveObject;
+        }
         set
         {
             _isMoveObject = value;
