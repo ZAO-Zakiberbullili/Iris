@@ -2,7 +2,7 @@
     "name": "PlayerInput",
     "maps": [
         {
-            "name": "Default",
+            "name": "Player",
             "id": "693ed7b0-ff38-47f4-be49-08e861ca8337",
             "actions": [
                 {
@@ -54,6 +54,15 @@
                     "name": "Quit",
                     "type": "Button",
                     "id": "28ab2bb4-a37f-4550-8bcd-ba00686f9734",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "1fc2fc31-b881-4435-98e4-c8fd1b12c195",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -333,6 +342,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1926df29-a127-4cd5-8b57-c8174f8e298a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18bb82cc-04e6-43ca-bb64-fba864670b9d",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

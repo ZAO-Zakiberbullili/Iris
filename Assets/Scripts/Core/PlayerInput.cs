@@ -47,4 +47,12 @@ public class PlayerInput : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.started) {
+            // flip
+            Gameplay.GameManager.InteractButtonPressed = !Gameplay.GameManager.InteractButtonPressed;
+        } 
+    }
 }

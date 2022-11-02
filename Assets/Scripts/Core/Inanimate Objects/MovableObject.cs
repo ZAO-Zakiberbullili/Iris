@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+//  freezePosition
+
 public class MovableObject : Object
 {
     private Rigidbody2D _rb;
@@ -11,9 +12,14 @@ public class MovableObject : Object
     public bool IsMovable { get; protected set; }
 
 
-    private void Start()
+    protected void Start()
     {
         _isMove = false;
+
+        BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
+        collider.isTrigger = true;
+        collider.edgeRadius = 0.15f;
+        BoxCollider2D collider2 = gameObject.AddComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -75,7 +81,7 @@ public class MovableObject : Object
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Gameplay.GameManager.InteractButtonPressed)
             {
                 _isMove = !_isMove;
 
@@ -84,7 +90,7 @@ public class MovableObject : Object
                 {
                     gameObject.AddComponent<Rigidbody2D>();
                     _rb = GetComponent<Rigidbody2D>();
-                    _rb.bodyType = RigidbodyType2D.Kinematic;
+                    _rb.bodyType = RigidbodyType2D.Dynamic; // Kinematic?
                     _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                 }
@@ -93,6 +99,8 @@ public class MovableObject : Object
                     Destroy(GetComponent<Rigidbody2D>());
                     _rb = null;
                 }
+
+                Gameplay.GameManager.InteractButtonPressed = false;
             }
 
             if (_isMove)

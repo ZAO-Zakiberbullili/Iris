@@ -17,6 +17,8 @@ public class Gameplay : MonoBehaviour
 
     public Vector2 direction;
 
+    public bool InteractButtonPressed = false;
+
     public void SwitchHero(Hero newHero)
     {
         for (int i = 0; i < Players.Length; i++)
