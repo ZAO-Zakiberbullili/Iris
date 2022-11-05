@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bdd05acc699364294b2353ace748a2, type: 3}
   m_Name: Neron
   m_EditorClassIdentifier: 
-  PawnName: Neron
+  Name: Neron
+  X: 6
+  Y: 0
   Hp: 10
+  MaxHp: 10
+  Mp: 10
+  MaxMp: 10
   Speed: 5
-  AnimUp: {fileID: 7400000, guid: 84811319a6be9d543b861af97a5836f7, type: 2}
-  AnimDown: {fileID: 7400000, guid: 89f80a3c0497fb347a6843d9c1afce97, type: 2}
-  AnimRight: {fileID: 7400000, guid: 543228b5fd8950049bcbcd4b786de7ce, type: 2}
-  AnimLeft: {fileID: 7400000, guid: 4cac8dca07b63a54b87d0d7967494394, type: 2}
+  TilesPerTurn: 5
+  sprite: {fileID: -1434217315, guid: 9d3748cc092c5d24c9e4ff7bde86d36c, type: 3}
+  Anim: {fileID: 9100000, guid: 0dfb9366fbbe0b549a0a453a2ae5048e, type: 2}
